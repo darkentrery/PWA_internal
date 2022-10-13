@@ -18,8 +18,7 @@ services:
     ports:
       - "8000:8000"
     env_file:
-      - ./.env.django
-      - ./.env.postgres
+      - ./.env
     depends_on:
       - postgres_pwa
 
@@ -34,6 +33,6 @@ services:
     volumes:
       - postgres_data_pwa:/var/lib/postgresql/data/
     env_file:
-      - ./.env.postgres
+      - ./.env
 
 
